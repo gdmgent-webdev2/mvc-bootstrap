@@ -1,6 +1,7 @@
 <?php
 use Slim\Psr7\Request;
 use Slim\Psr7\Response;
+use Src\Http\Controllers\NewsController;
 
 // add routes
 $app->get('/', function (Request $req, Response $res) {
@@ -13,3 +14,5 @@ $app->get('/hello/{name}', function (Request $req, Response $res, $args) {
     $res->getBody()->write("Hello $name");
     return $res;
 });
+
+$app->get('/news', NewsController::class . ':index');
