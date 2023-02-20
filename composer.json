@@ -14,7 +14,10 @@
         }
     ],
     "require": {
-        "symfony/var-dumper": "^6.2"
+        "symfony/var-dumper": "^6.2",
+        "slim/slim": "^4.11",
+        "slim/psr7": "^1.6",
+        "filp/whoops": "^2.14"
     },
     "scripts": {
         "serve": "php -S 127.0.0.1:5678 -t public"
