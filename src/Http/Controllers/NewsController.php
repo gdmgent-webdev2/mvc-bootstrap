@@ -29,4 +29,10 @@ class NewsController {
         $res->getBody()->write($view);
         return $res;
     }
+
+    // detail
+
+    // create
+
+    // store
 }
