@@ -18,7 +18,8 @@
         "slim/slim": "^4.11",
         "slim/psr7": "^1.6",
         "filp/whoops": "^2.14",
-        "illuminate/database": "^10.1"
+        "illuminate/database": "^10.1",
+        "vlucas/phpdotenv": "^5.5"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.7"
