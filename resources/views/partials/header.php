@@ -4,7 +4,12 @@
         <?php foreach($categories as $category): ?>
             <li>
                 <!-- link to category -->
-                <a href="/<?= $category->slug ?>">
+                <a 
+                    href="/<?= $category->slug ?>"
+                    <?php if($category->slug === $categorySlug): ?>
+                        style="font-weight: bold;"
+                    <?php endif; ?>
+                >
                     <?= $category->title ?>
                 </a> 
                 &nbsp;&nbsp;

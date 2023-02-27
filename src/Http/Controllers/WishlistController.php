@@ -28,7 +28,7 @@ class WishlistController
         }
 
         $view = View::render('wishlist', 
-            compact('games', 'categories')
+            compact('games', 'categories', 'categorySlug')
         );
         $res->getBody()->write($view);
         return $res;

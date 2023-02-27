@@ -4,7 +4,7 @@
 
 <ul>
 <?php foreach($games as $game): ?>
-    <li><?php echo $game->title; ?></li>
+    <li><?= $game->title; ?> <em>(<?= $game->category->title; ?>)</em> </li>
 <?php endforeach; ?>
 </ul>
 <?php include('partials/footer.php'); ?>
