@@ -11,11 +11,23 @@ $loader = require_once BASEPATH . 'vendor/autoload.php';
 $dotenv = Dotenv::createImmutable(BASEPATH);
 $dotenv->load();
 
-
-// i like nice errors and i cannot lie
-$whoops = new \Whoops\Run();
-$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler());
-$whoops->register();
+// if local, show errors
+if($_ENV['APP_ENV'] === 'local') {
+    // show errors
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+    
+    // show pretty errors
+    $whoops = new \Whoops\Run();
+    $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler());
+    $whoops->register();
+} else {
+    // hide errors
+    ini_set('display_errors', 0);
+    ini_set('display_startup_errors', 0);
+    error_reporting(0);
+}
 
 // instantiate eloquent database orm
 $capsule = new Capsule;

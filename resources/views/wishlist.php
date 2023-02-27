@@ -16,7 +16,7 @@
             </div>
             <div class="add-game__form-control add-game__form-control--sm">
                 <label for="price">Price</label> 
-                <input type="text" name="price" autocomplete="off"> </div>
+                <input type="number" name="price" autocomplete="off"> </div>
         </div>
         <div class="add-game__form-row">
             <div class="add-game__form-control"> 

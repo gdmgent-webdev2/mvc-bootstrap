@@ -49,7 +49,8 @@ class WishlistController
         $game->save();
 
         // redirect to wishlist
-        header('Location: /');
-        exit;
+        // header("Location: " . $data['redirect']);
+        // exit;
+        return $res->withHeader('Location', $data['redirect'])->withStatus(302);
     }
 }
