@@ -3,4 +3,4 @@
 use Src\Http\Controllers\WishlistController;
 
 // add routes
-$app->get('/', WishlistController::class . ':index');
+$app->get('/[{category}]', WishlistController::class . ':index');
