@@ -6,8 +6,8 @@ use Slim\Factory\AppFactory;
 $loader = require_once BASEPATH . 'vendor/autoload.php';
 
 // i like nice errors and i cannot lie
-$whoops = new \Whoops\Run;
-$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler);
+$whoops = new \Whoops\Run();
+$whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler());
 $whoops->register();
 
 // instantiate the app

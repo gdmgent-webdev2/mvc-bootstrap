@@ -6,8 +6,10 @@ use Slim\Psr7\Request;
 use Slim\Psr7\Response;
 use Src\Providers\View;
 
-class NewsController {
-    public static function index(Request $req, Response $res, $args) {
+class NewsController
+{
+    public static function index(Request $req, Response $res, $args)
+    {
         $randomNews = [
             [
                 'title' => 'Titanic is gezonken',

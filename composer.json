@@ -24,6 +24,7 @@
     },
     "scripts": {
         "snuffel": "phpcs --standard=PSR12 src",
+        "snuffel:fix": "phpcbf --standard=PSR12 src",
         "serve": "php -S 127.0.0.1:5678 -t public"
     },
     "config": {
