@@ -34,9 +34,22 @@ class WishlistController
         return $res;
     }
 
-    // detail
-
-    // create
-
     // store
+    public static function store(Request $req, Response $res, $args)
+    {
+        // get data from form
+        $data = $req->getParsedBody();
+
+        // create new game
+        $game = new Game();
+        $game->title = $data['title'];
+        $game->price = $data['price'];
+        $game->description = $data['description'];
+        $game->category_id = 1;
+        $game->save();
+
+        // redirect to wishlist
+        header('Location: /');
+        exit;
+    }
 }
