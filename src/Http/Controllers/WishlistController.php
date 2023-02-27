@@ -12,6 +12,8 @@ class WishlistController
 {
     public static function index(Request $req, Response $res, $args)
     {
+        // get categories for navigation
+        $categories = Category::all();
 
         // get category from url
         $categorySlug = $req->getAttribute('category');
@@ -20,12 +22,10 @@ class WishlistController
             // get all games from database
             $games = Game::all();
         } else {
+            // get games from category
             $category = Category::where('slug', $categorySlug)->first();
             $games = $category->games;
         }
-
-
-        $categories = Category::all();
 
         $view = View::render('wishlist', 
             compact('games', 'categories')
